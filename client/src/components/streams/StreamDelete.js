@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Modal from "../Modal";
 import history from "../../history";
 import { fetchStream, deleteStream } from "../../actions";
@@ -18,7 +19,9 @@ class StreamDelete extends React.Component {
         >
           Delete
         </button>
-        <button className="ui button">Cancel</button>
+        <Link className="ui button" to="/">
+          Cancel
+        </Link>
       </div>
     );
   }
@@ -28,8 +31,7 @@ class StreamDelete extends React.Component {
       return `Are you sure you want to delete this stream?`;
     }
 
-    return `Are you sure you want to delete: \n 
-            ${this.props.stream.title}?`;
+    return `Are you sure you want to delete: \n ${this.props.stream.title}?`;
   }
 
   render() {

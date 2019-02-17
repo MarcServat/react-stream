@@ -9,7 +9,7 @@ const Modal = props => {
         className="ui standard modal visible active"
       >
         <div className="header">{props.title}</div>
-        <div className="content">{props.content}</div>
+        <p className="content">{props.content}</p>
         <div className="actions">{props.actions}</div>
       </div>
     </div>,
