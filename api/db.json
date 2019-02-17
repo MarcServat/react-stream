@@ -1,12 +1,6 @@
 {
   "streams": [
     {
-      "title": "asd",
-      "description": "asd",
-      "userId": "103427444292029274445",
-      "id": 1
-    },
-    {
       "title": "Climbing stream",
       "description": "my streams of climbing",
       "userId": "103427444292029274445",
@@ -14,9 +8,15 @@
     },
     {
       "title": "My new stream",
-      "description": "jajaja",
+      "description": "ahora si!!!",
       "userId": "103427444292029274445",
       "id": 3
+    },
+    {
+      "title": "stream to delete",
+      "description": "this is a stream test",
+      "userId": "103427444292029274445",
+      "id": 4
     }
   ]
 }
