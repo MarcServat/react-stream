@@ -7,14 +7,23 @@ import StreamDelete from "./streams/StreamDelete";
 import StreamShow from "./streams/StreamShow";
 import Header from "./Header";
 import history from "../history";
+import LanguageContext from "../context/LanguageContext";
 
 class App extends Component {
+  state = { language: 'english' };
+  static contextType = LanguageContext;
+
+  onLanguageChange = language => {
+    console.log(this.context)
+    this.setState({language})
+  };
+
   render() {
     return (
       <div>
         <Router history={history}>
           <div>
-            <Header />
+            <Header language={() => this.onLanguageChange()} />
             <Switch>
               <Route path="/" exact component={StreamList} />
               <Route path="/streams/new" exact component={StreamCreate} />
